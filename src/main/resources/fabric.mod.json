@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "extras",
+	"version": "${version}",
+	"name": "Extras",
+	"description": "Extra stuff!",
+	"authors": [
+		"CodenamedSuper"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/extras/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"codenamed.extras.Extras"
+		],
+		"fabric-datagen": [
+			"codenamed.extras.ExtrasDataGenerator"
+		]
+	},
+	"mixins": [
+		"extras.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
