@@ -17,4 +17,6 @@ public class Extras implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 	}
+
+	//Hello
 }
