@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "extras:block/plant_pot"
+    },
+    "facing=south": {
+      "model": "extras:block/plant_pot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extras:block/plant_pot",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "extras:block/plant_pot",
+      "y": 90
+    }
+  }
+}

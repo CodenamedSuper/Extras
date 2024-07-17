@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"codenamed.extras.ExtrasDataGenerator"
+		],
+		"client": [
+			"codenamed.extras.ExtrasClient"
 		]
 	},
 	"mixins": [

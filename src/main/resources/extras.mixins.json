@@ -3,7 +3,11 @@
 	"package": "codenamed.extras.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"CropBlockMixin",
+		"FlowerBlockMixin",
+		"PlantBlockMixin",
+		"DeadBushBlockMixin",
+		"StemBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
