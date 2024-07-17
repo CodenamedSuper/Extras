@@ -1,0 +1,6 @@
+{
+  "parent": "extras:block/template_rack_slot_bottom_left",
+  "textures": {
+    "texture": "extras:block/rack_occupied"
+  }
+}

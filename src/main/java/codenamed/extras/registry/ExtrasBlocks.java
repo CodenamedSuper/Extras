@@ -3,6 +3,7 @@ package codenamed.extras.registry;
 
 import codenamed.extras.Extras;
 import codenamed.extras.block.custom.PlantPotBlock;
+import codenamed.extras.block.custom.RackBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -22,6 +23,8 @@ public class ExtrasBlocks {
             new PlantPotBlock(AbstractBlock.Settings.copy(Blocks.DECORATED_POT).strength(1.5F, 3.0F).sounds(BlockSoundGroup.STONE).nonOpaque().requiresTool()));
 
 
+    public static final Block RACK = registerBlock("rack",
+            new RackBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
 
 

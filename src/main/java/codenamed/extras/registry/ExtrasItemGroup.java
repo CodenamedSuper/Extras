@@ -20,6 +20,7 @@ public class ExtrasItemGroup {
 
 
                         entries.add(ExtrasBlocks.PLANT_POT);
+                        entries.add(ExtrasBlocks.RACK);
 
 
 
