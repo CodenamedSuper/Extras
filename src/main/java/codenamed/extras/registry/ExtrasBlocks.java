@@ -2,6 +2,7 @@ package codenamed.extras.registry;
 
 
 import codenamed.extras.Extras;
+import codenamed.extras.block.custom.JarBlock;
 import codenamed.extras.block.custom.PlantPotBlock;
 import codenamed.extras.block.custom.RackBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -26,7 +27,8 @@ public class ExtrasBlocks {
     public static final Block RACK = registerBlock("rack",
             new RackBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
-
+    public static final Block JAR = registerBlock("jar",
+            new JarBlock(AbstractBlock.Settings.copy(Blocks.GLASS).nonOpaque()));
 
     private static Item registerPlaceableBlockItem(String name, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(Extras.MOD_ID, name),
