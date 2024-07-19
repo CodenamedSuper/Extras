@@ -2,6 +2,7 @@ package codenamed.extras.block.entity;
 
 import codenamed.extras.Extras;
 import codenamed.extras.block.custom.RackBlock;
+import codenamed.extras.registry.ExtrasBlockEntityType;
 import com.mojang.logging.LogUtils;
 import java.util.Objects;
 import java.util.function.Predicate;
