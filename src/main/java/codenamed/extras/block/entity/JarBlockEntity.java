@@ -83,6 +83,5 @@ public class JarBlockEntity extends BlockEntity implements Inventory {
 
     public void removeStack() {
         currentSize--;
-        Extras.LOGGER.info(inventory.getLast().toString());
     }
 }

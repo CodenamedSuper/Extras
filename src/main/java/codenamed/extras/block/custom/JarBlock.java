@@ -58,7 +58,7 @@ public class JarBlock extends BlockWithEntity {
                 tryAddItem(jarBlockEntity, player, hand);
             }
             else if (jarBlockEntity.getCurrentSize() > 0){
-                player.getInventory().insertStack((jarBlockEntity).getStack((jarBlockEntity).getCurrentSize()-1));
+                player.getInventory().insertStack(jarBlockEntity.getStack((jarBlockEntity).getCurrentSize()-1));
                 jarBlockEntity.removeStack();
             }
             return ItemActionResult.SUCCESS;
