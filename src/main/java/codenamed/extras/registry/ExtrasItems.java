@@ -10,7 +10,7 @@ import net.minecraft.util.Rarity;
 public class ExtrasItems {
 
     public static final Item TOTEM_OF_REGENERATION = registerItem("totem_of_regeneration",
-            new TotemOfRegenerationItem(new Item.Settings().rarity(Rarity.UNCOMMON)));
+            new TotemOfRegenerationItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Extras.MOD_ID, name), item);

@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 public class ExtrasItemGroup {
 
     public static ItemGroup FLAVORED_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(Extras.MOD_ID, "extras_group"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.extras_group"))
+            FabricItemGroup.builder().displayName(Text.translatable("Extras"))
                     .icon(() -> new ItemStack(Items.SADDLE)).entries((displayContext, entries) -> {
 
 

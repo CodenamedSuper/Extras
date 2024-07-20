@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
     "layer0": "extras:item/totem_of_regeneration_state_0"
-  }
+  },
+  "overrides": [
+    { "predicate": { "custom_model_data": 0 }, "model": "extras:item/totem_of_regeneration_state_0" },
+    { "predicate": { "custom_model_data": 1 }, "model": "extras:item/totem_of_regeneration_state_1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "extras:item/totem_of_regeneration_state_2" }
+  ]
 }
