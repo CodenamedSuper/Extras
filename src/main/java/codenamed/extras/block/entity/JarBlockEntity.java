@@ -75,6 +75,13 @@ public class JarBlockEntity extends BlockEntity implements Inventory {
 
     }
 
+    public ItemStack getStack() {
+        if (currentSize > 0) {
+            currentSize--;
+        }
+        return inventory.get(currentSize);
+    }
+
     public  ItemStack getRenderStack(int index) {
 
 

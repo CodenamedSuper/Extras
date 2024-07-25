@@ -1,20 +1,15 @@
 package codenamed.extras.block.custom;
 
-import codenamed.extras.Extras;
 import codenamed.extras.block.entity.JarBlockEntity;
-import codenamed.extras.block.entity.RackBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -46,9 +41,22 @@ public class JarBlock extends BlockWithEntity {
 
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 
-        Extras.LOGGER.info("1212");
+        BlockEntity e = world.getBlockEntity(pos);
+
+        if (e instanceof JarBlockEntity jarBlockEntity) {
+
+                ItemScatterer.spawn(world, pos, jarBlockEntity);
+
+        }
+        super.onBreak(world, pos, state, player);
+
+        return state;
+    }
+
+    @Override
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
         BlockEntity e = world.getBlockEntity(pos);
 
@@ -58,12 +66,13 @@ public class JarBlock extends BlockWithEntity {
                 tryAddItem(jarBlockEntity, player, hand);
             }
             else if (jarBlockEntity.getCurrentSize() > 0){
-                player.getInventory().insertStack(jarBlockEntity.getStack((jarBlockEntity).getCurrentSize()-1));
-                jarBlockEntity.removeStack();
+                player.getInventory().insertStack(new ItemStack((jarBlockEntity.getStack().getItem()), 1));
+                return ItemActionResult.SUCCESS;
+
             }
             return ItemActionResult.SUCCESS;
         }
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return  ItemActionResult.SUCCESS;
     }
 
     public void tryAddItem(JarBlockEntity entity, PlayerEntity player, Hand hand) {
