@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "codenamed.extras.mixin",
+	"package": "codenamed.ornaments.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"CropBlockMixin",

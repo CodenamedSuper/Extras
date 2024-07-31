@@ -1,6 +1,0 @@
-{
-  "parent": "extras:block/template_rack_slot_bottom_right",
-  "textures": {
-    "texture": "extras:block/rack_empty"
-  }
-}

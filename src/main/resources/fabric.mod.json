@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "extras",
+	"id": "ornaments",
 	"version": "${version}",
 	"name": "Extras",
 	"description": "Extra stuff!",
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/extras/icon.png",
+	"icon": "assets/ornaments/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"codenamed.extras.Extras"
+			"codenamed.ornaments.Extras"
 		],
 		"fabric-datagen": [
-			"codenamed.extras.ExtrasDataGenerator"
+			"codenamed.ornaments.ExtrasDataGenerator"
 		],
 		"client": [
-			"codenamed.extras.ExtrasClient"
+			"codenamed.ornaments.ExtrasClient"
 		]
 	},
 	"mixins": [
-		"extras.mixins.json"
+		"ornaments.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
