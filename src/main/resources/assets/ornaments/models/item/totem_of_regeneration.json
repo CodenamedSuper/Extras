@@ -1,0 +1,11 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ornaments:item/totem_of_regeneration_state_0"
+  },
+  "overrides": [
+    { "predicate": { "custom_model_data": 0 }, "model": "ornaments:item/totem_of_regeneration_state_0" },
+    { "predicate": { "custom_model_data": 1 }, "model": "ornaments:item/totem_of_regeneration_state_1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "ornaments:item/totem_of_regeneration_state_2" }
+  ]
+}

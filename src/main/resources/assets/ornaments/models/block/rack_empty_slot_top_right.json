@@ -1,0 +1,6 @@
+{
+  "parent": "ornaments:block/template_rack_slot_top_right",
+  "textures": {
+    "texture": "ornaments:block/rack_empty"
+  }
+}
