@@ -11,17 +11,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ExtrasItemGroup {
+public class OrnamentsItemGroup {
 
     public static ItemGroup FLAVORED_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(codenamed.ornaments.Ornaments.MOD_ID, "ornaments_group"),
-            FabricItemGroup.builder().displayName(Text.translatable("Extras"))
+            FabricItemGroup.builder().displayName(Text.translatable("Ornaments"))
                     .icon(() -> new ItemStack(Items.SADDLE)).entries((displayContext, entries) -> {
 
 
-                        entries.add(ExtrasBlocks.PLANT_POT);
-                        entries.add(ExtrasBlocks.RACK);
-                        entries.add(ExtrasBlocks.JAR);
-                        entries.add(ExtrasItems.TOTEM_OF_REGENERATION);
+                        entries.add(OrnamentsBlocks.PLANT_POT);
+                        entries.add(OrnamentsBlocks.RACK);
+                        entries.add(OrnamentsBlocks.JAR);
+                        entries.add(OrnamentsItems.TOTEM_OF_REGENERATION);
 
 
 

@@ -13,7 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 
-public class ExtrasBlocks {
+public class OrnamentsBlocks {
 
 
     public static final Block PLANT_POT = registerBlock("plant_pot",

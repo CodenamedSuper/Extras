@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
-public class ExtrasModels {
+public class OrnamentsModels {
 
     public static final Model TEMPLATE_RACK_SLOT_TOP_LEFT;
     public static final Model TEMPLATE_RACK_SLOT_TOP_MID;

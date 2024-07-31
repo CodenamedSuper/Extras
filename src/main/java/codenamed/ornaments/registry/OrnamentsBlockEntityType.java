@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Set;
 
-public class ExtrasBlockEntityType {
+public class OrnamentsBlockEntityType {
 
     public static final BlockEntityType<RackBlockEntity> RACK;
     public static final BlockEntityType<JarBlockEntity> JAR;
@@ -38,8 +38,8 @@ public class ExtrasBlockEntityType {
     }
 
     static {
-        RACK = create("rack", BlockEntityType.Builder.create(RackBlockEntity::new, ExtrasBlocks.RACK));
-        JAR = create("jar", BlockEntityType.Builder.create(JarBlockEntity::new, ExtrasBlocks.JAR));
+        RACK = create("rack", BlockEntityType.Builder.create(RackBlockEntity::new, OrnamentsBlocks.RACK));
+        JAR = create("jar", BlockEntityType.Builder.create(JarBlockEntity::new, OrnamentsBlocks.JAR));
     }
 
     public static final class Builder<T extends BlockEntity> implements FabricBlockEntityType.Builder<T> {

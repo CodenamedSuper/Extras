@@ -1,6 +1,6 @@
 package codenamed.ornaments.mixin;
 
-import codenamed.ornaments.registry.ExtrasBlocks;
+import codenamed.ornaments.registry.OrnamentsBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -19,7 +19,7 @@ public abstract class CropBlockMixin extends Block {
 
     @Inject(method = "canPlantOnTop", at = @At("HEAD"), cancellable = true)
     private void yourModId$allowSeedingOnPlanter(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if (floor.isOf(ExtrasBlocks.PLANT_POT)) {
+        if (floor.isOf(OrnamentsBlocks.PLANT_POT)) {
             cir.setReturnValue(true);
         }
     }

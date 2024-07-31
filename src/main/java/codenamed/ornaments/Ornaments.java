@@ -1,8 +1,8 @@
 package codenamed.ornaments;
 
-import codenamed.ornaments.registry.ExtrasBlocks;
-import codenamed.ornaments.registry.ExtrasItemGroup;
-import codenamed.ornaments.registry.ExtrasItems;
+import codenamed.ornaments.registry.OrnamentsBlocks;
+import codenamed.ornaments.registry.OrnamentsItemGroup;
+import codenamed.ornaments.registry.OrnamentsItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
@@ -16,7 +16,7 @@ public class Ornaments implements ModInitializer {
 
 	public static void registerModelPredicateProviders() {
 
-		ModelPredicateProviderRegistry.register(ExtrasItems.TOTEM_OF_REGENERATION, Identifier.ofVanilla("custom_model_data"), (itemStack, clientWorld, livingEntity, var) -> 2);
+		ModelPredicateProviderRegistry.register(OrnamentsItems.TOTEM_OF_REGENERATION, Identifier.ofVanilla("custom_model_data"), (itemStack, clientWorld, livingEntity, var) -> 2);
 
 	}
 	@Override
@@ -30,9 +30,9 @@ public class Ornaments implements ModInitializer {
 		registerModelPredicateProviders();
 
 
-		ExtrasBlocks.registerModBlocks();
-		ExtrasItems.registerModItems();
-		ExtrasItemGroup.registerItemGroups();
+		OrnamentsBlocks.registerModBlocks();
+		OrnamentsItems.registerModItems();
+		OrnamentsItemGroup.registerItemGroups();
 	}
 
 	//Hello

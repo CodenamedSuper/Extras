@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "ornaments",
 	"version": "${version}",
-	"name": "Extras",
+	"name": "Ornaments",
 	"description": "Extra stuff!",
 	"authors": [
 		"CodenamedSuper"
@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"codenamed.ornaments.Extras"
+			"codenamed.ornaments.Ornaments"
 		],
 		"fabric-datagen": [
-			"codenamed.ornaments.ExtrasDataGenerator"
+			"codenamed.ornaments.OrnamentsDataGenerator"
 		],
 		"client": [
-			"codenamed.ornaments.ExtrasClient"
+			"codenamed.ornaments.OrnamentsClient"
 		]
 	},
 	"mixins": [

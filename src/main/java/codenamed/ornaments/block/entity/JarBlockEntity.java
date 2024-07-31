@@ -1,6 +1,6 @@
 package codenamed.ornaments.block.entity;
 
-import codenamed.ornaments.registry.ExtrasBlockEntityType;
+import codenamed.ornaments.registry.OrnamentsBlockEntityType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,7 +17,7 @@ public class JarBlockEntity extends BlockEntity implements Inventory {
 
 
     public JarBlockEntity(BlockPos pos, BlockState state) {
-        super(ExtrasBlockEntityType.JAR, pos, state);
+        super(OrnamentsBlockEntityType.JAR, pos, state);
         this.inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
 
     }

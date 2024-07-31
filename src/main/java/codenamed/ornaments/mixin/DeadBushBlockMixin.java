@@ -1,6 +1,6 @@
 package codenamed.ornaments.mixin;
 
-import codenamed.ornaments.registry.ExtrasBlocks;
+import codenamed.ornaments.registry.OrnamentsBlocks;
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
@@ -19,7 +19,7 @@ public abstract class DeadBushBlockMixin extends Block {
     @Inject(method = "canPlantOnTop", at = @At("HEAD"), cancellable = true)
     private void yourModId$allowPlantingOnPlanter(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> info) {
         Block block = world.getBlockState(pos).getBlock();
-        if (block == ExtrasBlocks.PLANT_POT) {
+        if (block == OrnamentsBlocks.PLANT_POT) {
             info.setReturnValue(true);
 
         }

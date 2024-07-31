@@ -6,7 +6,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
-public class ExtrasItems {
+public class OrnamentsItems {
 
     public static final Item TOTEM_OF_REGENERATION = registerItem("totem_of_regeneration",
             new TotemOfRegenerationItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1)));
