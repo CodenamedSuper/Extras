@@ -1,5 +1,6 @@
 package codenamed.ornaments.block.custom;
 
+import codenamed.ornaments.Ornaments;
 import codenamed.ornaments.block.entity.JarBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
@@ -64,6 +65,8 @@ public class JarBlock extends BlockWithEntity {
 
             if (player.getStackInHand(hand) != ItemStack.EMPTY) {
                 tryAddItem(jarBlockEntity, player, hand);
+                return ItemActionResult.SUCCESS;
+
             }
             else if (jarBlockEntity.getCurrentSize() > 0){
                 player.getInventory().insertStack(new ItemStack((jarBlockEntity.getStack().getItem()), 1));
@@ -77,8 +80,10 @@ public class JarBlock extends BlockWithEntity {
 
     public void tryAddItem(JarBlockEntity entity, PlayerEntity player, Hand hand) {
         if (entity.getCurrentSize() < entity.size() && player.getStackInHand(hand) != ItemStack.EMPTY) {
+            Ornaments.LOGGER.info(player.getStackInHand(hand).toString());
+            entity.setStack(entity.getCurrentSize(), player.getStackInHand(hand).getItem());
             player.getStackInHand(hand).decrement(1);
-            entity.setStack(entity.getCurrentSize(), player.getStackInHand(hand));
+
         }
     }
 

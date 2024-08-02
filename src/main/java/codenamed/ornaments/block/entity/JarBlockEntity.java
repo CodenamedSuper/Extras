@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -60,6 +61,15 @@ public class JarBlockEntity extends BlockEntity implements Inventory {
     public void setStack(int slot, ItemStack stack) {
         inventory.set(slot, stack);
         currentSize++;
+    }
+
+
+    public void setStack(int slot, Item item) {
+        if (item != ItemStack.EMPTY.getItem()) {
+            inventory.set(slot, new ItemStack(item, 1));
+            currentSize++;
+
+        }
     }
 
     @Override
